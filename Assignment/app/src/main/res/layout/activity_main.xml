@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:padding="20sp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/imageLogo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/logo"></ImageView>
+
+        <TextView
+            android:id="@+id/viewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|top"
+            android:text="The Shoppy"
+            android:textColor="#10507F"
+            android:textSize="24sp"></TextView>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10sp"
+            android:background="@color/divider" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/viewName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="text"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/viewAddress1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Address Line 1"
+                android:inputType="text"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/viewAddress2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Address Line 2"
+                android:inputType="text"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/viewCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="City"
+                android:inputType="text"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="117dp"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <EditText
+                    android:id="@+id/editTextPostal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="Postal Code"
+                    android:inputType="textPostalAddress"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextViewProvince"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="Province"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextViewCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="Country"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="50sp"
+            android:background="@color/divider" />
+
+        <TextView
+            android:id="@+id/viewOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|bottom"
+            android:text="What are you Looking for?"
+            android:textColor="#10507F"
+            android:textSize="18sp"></TextView>
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10sp"
+            android:background="@color/divider" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupOption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButtonDesktop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desktop"
+                android:textSize="16sp"
+                android:checked="false"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonLaptop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:text="Laptop"
+                android:textSize="16sp"
+                android:checked="false"/>
+
+        </RadioGroup>
+
+        <ScrollView
+            android:id="@+id/scrollDesktop"
+            android:layout_width="wrap_content"
+            android:layout_height="341dp">
+
+            <LinearLayout
+                android:id="@+id/layoutScrollDesktop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layoutDell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="195dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:elevation="6dp"
+                        app:cardCornerRadius="12dp">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="145dp"
+                            app:srcCompat="@drawable/dell" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/viewDell"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:gravity="center"
+                            android:text="Dell"
+                            android:textColor="#10507F"
+                            android:textSize="16sp"></TextView>
+
+                        <TextView
+                            android:id="@+id/viewDellDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dell All-in-One Desktop\nIntroducing the all new Intel 10th gen Dell All-in-One computer for those who wish to create and develop."
+                            android:textSize="14sp"></TextView>
+
+                        <TextView
+                            android:id="@+id/viewDellDesktopPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="$ 474.99"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="16sp"></TextView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutHp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="195dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:elevation="6dp"
+                        app:cardCornerRadius="12dp">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="145dp"
+                            app:srcCompat="@drawable/hp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/viewHp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:gravity="center"
+                            android:text="Hp"
+                            android:textColor="#10507F"
+                            android:textSize="16sp"></TextView>
+
+                        <TextView
+                            android:id="@+id/viewHpDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Hp All-in-One Desktop\nIntroducing the all new Intel 10th gen Hp All-in-One computer for those who wish to create and develop."
+                            android:textSize="14sp"></TextView>
+
+                        <TextView
+                            android:id="@+id/viewHpDesktopPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="$ 399.99"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="16sp"></TextView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutLenovo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="195dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:elevation="6dp"
+                        app:cardCornerRadius="12dp">
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="145dp"
+                            app:srcCompat="@drawable/lenovo" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/viewLenovo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:gravity="center"
+                            android:text="Lenovo"
+                            android:textColor="#10507F"
+                            android:textSize="16sp"></TextView>
+
+                        <TextView
+                            android:id="@+id/viewLenovoDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Lenovo All-in-One Desktop\nIntroducing the all new Intel 10th gen Lenovo All-in-One computer for those who wish to create and develop."
+                            android:textSize="14sp"></TextView>
+
+                        <TextView
+                            android:id="@+id/viewLenovoDesktopPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="$ 449.99"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="16sp"></TextView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <ScrollView
+                android:id="@+id/scrollLaptop"
+                android:layout_width="wrap_content"
+                android:layout_height="341dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layoutDelll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="195dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="12dp"
+                            android:elevation="6dp"
+                            app:cardCornerRadius="12dp">
+
+                            <ImageView
+                                android:id="@+id/imageViewLaptop"
+                                android:layout_width="wrap_content"
+                                android:layout_height="145dp"
+                                app:srcCompat="@drawable/delll" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/viewDellLaptop"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:gravity="center"
+                                android:text="Dell"
+                                android:textColor="#10507F"
+                                android:textSize="16sp"></TextView>
+
+                            <TextView
+                                android:id="@+id/viewDellLaptopDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Dell Laptop\nIntroducing the all new Intel 10th gen Dell computer for those who wish to create and develop."
+                                android:textSize="14sp"></TextView>
+
+                            <TextView
+                                android:id="@+id/viewDellLaptopPrice"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="$ 1249.99"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="16sp"></TextView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutHpl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="195dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="12dp"
+                            android:elevation="6dp"
+                            app:cardCornerRadius="12dp">
+
+                            <ImageView
+                                android:id="@+id/imageViewLaptop2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="145dp"
+                                app:srcCompat="@drawable/hpl" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/viewHpLaptop"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:gravity="center"
+                                android:text="Hp"
+                                android:textColor="#10507F"
+                                android:textSize="16sp"></TextView>
+
+                            <TextView
+                                android:id="@+id/viewHpLaptopDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Hp Laptop\nIntroducing the all new Intel 10th gen Hp computer for those who wish to create and develop."
+                                android:textSize="14sp"></TextView>
+
+                            <TextView
+                                android:id="@+id/viewHpLaptopPrice"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="$ 1149.99"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="16sp"></TextView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutLenovol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="195dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="12dp"
+                            android:elevation="6dp"
+                            app:cardCornerRadius="12dp">
+
+                            <ImageView
+                                android:id="@+id/imageViewLaptop3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="145dp"
+                                app:srcCompat="@drawable/lenovol" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/viewLenovoLaptop"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:gravity="center"
+                                android:text="Lenovo"
+                                android:textColor="#10507F"
+                                android:textSize="16sp"></TextView>
+
+                            <TextView
+                                android:id="@+id/viewLenovoLaptopDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Lenovo Laptop\nIntroducing the all new Intel 10th gen Lenovo computer for those who wish to create and develop."
+                                android:textSize="14sp"></TextView>
+
+                            <TextView
+                                android:id="@+id/viewLenovoLaptopPrice"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="$ 1549.99"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="16sp"></TextView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10sp"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/viewBrand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|bottom"
+                android:text="Your Selection / Brand?"
+                android:textColor="#10507F"
+                android:textSize="18sp">
+            </TextView>
+
+            <Spinner
+                android:id="@+id/spinnerBrand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contextClickable="true"
+                android:spinnerMode="dropdown"
+                android:focusable="true"
+                android:layout_marginLeft="15sp"
+                android:layout_gravity="center"
+                android:focusableInTouchMode="true"
+                android:focusedByDefault="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutAdditional"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10sp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+            <TextView
+            android:id="@+id/viewAdditional"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|bottom"
+            android:text="Add-ons: "
+            android:textColor="#10507F"
+            android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxSSD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/viewAdditional"
+                android:layout_marginLeft="10sp"
+                android:text="SSD (Solid State Hard Drive)"
+                android:textSize="16sp"></CheckBox>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/checkBoxPrinter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/checkBoxSSD"
+                    android:layout_marginLeft="10sp"
+                    android:text="Printer"
+                    android:textSize="16sp"></CheckBox>
+                </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewDesktopAdditional"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10sp">
+
+            <LinearLayout
+                android:id="@+id/layoutDesktopAdditional"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|bottom"
+                    android:text="Desktop Added Peripherals: "
+                    android:textColor="#10507F"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupDesktop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonDesktopWebcam"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Webcam"
+                        android:textSize="16sp"
+                        android:checked="false"/>
+
+                    <RadioButton
+                        android:id="@+id/radioButtonDesktopExternalHD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5sp"
+                        android:text="External Hard Drive"
+                        android:textSize="16sp"
+                        android:checked="false"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewLaptopAdditional"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10sp">
+
+                <LinearLayout
+                    android:id="@+id/layoutLaptopAdditional"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|bottom"
+                        android:text="Lapatop Added Peripherals: "
+                        android:textColor="#10507F"
+                        android:textSize="18sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupLaptop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioButtonLaptopCoolingMat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cooling Mat"
+                            android:textSize="16sp"
+                            android:checked="false"/>
+
+                        <RadioButton
+                            android:id="@+id/radioButtonLaptopLaptopUsbCHub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5sp"
+                            android:text="Usb C-Hub"
+                            android:textSize="16sp"
+                            android:checked="false"/>
+
+                        <RadioButton
+                            android:id="@+id/radioButtonLaptopStand"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5sp"
+                            android:text="Laptop Stand"
+                            android:textSize="16sp"
+                            android:checked="false"/>
+
+                    </RadioGroup>
+                </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10sp"
+            android:background="@color/divider" />
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_rounded"
+            android:padding="10sp"
+            android:clickable="true"></Button>
+
+        <TextView
+            android:id="@+id/viewInvoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:text=""
+            android:textColor="#10507F"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
